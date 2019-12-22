@@ -8,16 +8,13 @@ namespace UniLib
 		private const string MENU_PATH = "Tools/Show OverDraw";
 
 		[MenuItem(MENU_PATH)]
-		static void MenuAction ()
+		static void MenuAction()
 		{
-			//var menuPath = "CustomMenu/Example";
-			//	var @checked = Menu.GetChecked (menuPath);
-		//		Menu.SetChecked (menuPath, !@checked);
 			EditorPrefs.SetBool(MENU_PATH, !EditorPrefs.GetBool(MENU_PATH, false));
 		} 
 
 		[MenuItem(MENU_PATH, true)]
-		static bool MenuValidate ()
+		static bool MenuValidate()
 		{
 			Menu.SetChecked(MENU_PATH, EditorPrefs.GetBool(MENU_PATH, false));
 			return true;
