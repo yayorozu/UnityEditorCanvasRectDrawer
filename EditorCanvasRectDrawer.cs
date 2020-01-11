@@ -5,7 +5,7 @@ namespace UniLib
 {
 	public class EditorCanvasRectDrawer 
 	{
-		private const string MENU_PATH = "Tools/Show OverDraw";
+		private const string MENU_PATH = "Tools/Show Canvas OverDraw";
 
 		[MenuItem(MENU_PATH)]
 		static void MenuAction()
@@ -21,8 +21,8 @@ namespace UniLib
 		} 
 		
 		private static readonly Color parentColor = new Color(0f, 1.0f, 0f, 0.05f);
-		private static readonly Color childColor = new Color(1f, 0f, 0f, 1f);
-		private static readonly Color wireColor = new Color(0f, 0f, 0f, 1f);
+		private static readonly Color childColor = new Color(1f, 0f, 0f, 0.2f);
+		private static readonly Color wireColor = new Color(0f, 0f, 0f, 0.5f);
 		
 		[DrawGizmo (GizmoType.Selected)]
 		private static void DrawGizmo(RectTransform obj, GizmoType type)
